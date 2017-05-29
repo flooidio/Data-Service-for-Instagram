@@ -1,7 +1,9 @@
+import logging
 from pymongo import MongoClient
 
 from config import *
 from instagram_private_api import Client
+logger = logging.getLogger(__name__)
 
 def getAttribute(obj):
     output = {}
@@ -80,6 +82,14 @@ class Insgram_DataService():
 
 
 if __name__ == "__main__":
+
+
+    logger.setLevel(logging.DEBUG)
+    ch = logging.StreamHandler()
+    logger.addHandler(ch)
+    logger.info("started")
+
+
     username = username
     password = password
 

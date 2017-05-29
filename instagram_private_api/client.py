@@ -71,6 +71,8 @@ class Client(AccountsEndpointsMixin, DiscoverEndpointsMixin, FeedEndpointsMixin,
         self.timeout = kwargs.pop('timeout', 15)
         self.on_login = kwargs.pop('on_login', None)
         self.logger = logger
+   #     ch = logging.StreamHandler()
+   #     self.logger.addHandler(ch)
 
         user_settings = kwargs.pop('settings', None) or {}
         self.uuid = (
