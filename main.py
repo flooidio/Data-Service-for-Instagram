@@ -8,8 +8,6 @@ from datetime import datetime, timedelta
 from pymongo import MongoClient
 from config import *
 
-logger = logging.getLogger(__name__)
-
 try:
     from instagram_private_api import (
         Client, ClientError, ClientLoginError,
@@ -163,13 +161,7 @@ class Insgram_DataService():
 
 if __name__ == "__main__":
 
-<<<<<<< HEAD
 
-    logger.setLevel(logging.DEBUG)
-    ch = logging.StreamHandler()
-    logger.addHandler(ch)
-    logger.info("started")
-=======
     if len(sys.argv)>1:
         min_timestamp = int((datetime.utcnow() - timedelta(minutes=int(sys.argv[1]))).timestamp())
 
@@ -184,7 +176,7 @@ if __name__ == "__main__":
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     ch.setFormatter(formatter)
     logger.addHandler(ch)
->>>>>>> hideki-saito/master
+    logger.info("started")
 
     username = username
     password = password
