@@ -88,8 +88,8 @@ if __name__ == "__main__":
     logger.addHandler(ch)
     logger.info("started")
 
-    username = username1
-    password = password1
+    username = username
+    password = password
 
     service = Insgram_DataService(username, password)
 
